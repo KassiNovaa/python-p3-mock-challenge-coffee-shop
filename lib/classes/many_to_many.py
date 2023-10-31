@@ -30,7 +30,7 @@ class Coffee:
     
     def average_price(self):
         # self.num_orders <-- this is the method we already have access to above that find the total number of specific coffee has been ordered
-        sum_prices = ([ orders.price for orders in self.orders ],0)
+        sum_prices = sum([ orders.price for orders in self.orders ],0)
         # this reads: for the orders in self.orders (self = specific coffee) method return a list of the sum of the total price speant on that specific coffee 
 
         return sum_prices / self.num_orders
